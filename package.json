@@ -4,7 +4,8 @@
   "scripts": {
     "start": "node server.ts",
     "dev": "nodemon server.ts",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "jest"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
@@ -12,8 +13,14 @@
   "devDependencies": {
     "@eslint/js": "^9.6.0",
     "@types/bun": "latest",
+    "@types/jest": "^29.5.12",
+    "@types/supertest": "^6.0.2",
     "eslint": "9.x",
     "globals": "^15.8.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.1.5",
     "typescript-eslint": "^7.15.0"
   },
   "peerDependencies": {
@@ -23,6 +30,7 @@
     "@prisma/client": "^5.16.1",
     "@types/bcryptjs": "^2.4.6",
     "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/morgan": "^1.9.9",
     "@types/node": "^20.14.10",
     "bcryptjs": "^2.4.3",
@@ -30,8 +38,9 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-validator": "^7.1.0",
+    "http-status": "^1.7.4",
+    "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "nodemon": "^3.1.4",
     "prisma": "^5.16.1",
     "ts-node": "^10.9.2"
   }

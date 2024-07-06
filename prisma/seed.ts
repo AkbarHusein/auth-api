@@ -1,8 +1,8 @@
 import { hashSync } from 'bcryptjs'
-import pc from '../utils/prisma-client';
+import pc from '../utils/prisma-client'
 
 async function main() {
-    console.log("<---------------- Seeding User ---------------->");
+    console.log("<---------------- Seeding User ---------------->")
 
     return await pc.user.upsert({
         where: { email: 'admin@gmail.com' },
@@ -10,14 +10,14 @@ async function main() {
         create: {
             email: 'admin@gmail.com',
             name: 'admin',
-            password: hashSync('password', 10)
+            password: hashSync('password')
         }
     })
 
 }
 
 main().then(async (result) => {
-    console.log(result);
+    console.log(result)
     await pc.$disconnect()
 }).catch(async e => {
     console.error(e)

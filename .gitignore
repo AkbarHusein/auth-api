@@ -35,6 +35,7 @@ coverage
 *.lcov
 
 # nyc test coverage
+coverage
 
 .nyc_output
 
