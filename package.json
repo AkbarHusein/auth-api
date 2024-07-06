@@ -6,6 +6,9 @@
     "dev": "nodemon server.ts",
     "lint": "eslint"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "devDependencies": {
     "@eslint/js": "^9.6.0",
     "@types/bun": "latest",
